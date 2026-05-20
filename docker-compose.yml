@@ -1,0 +1,46 @@
+services:  
+  noon_pg:
+    image: postgres
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: noon_pg
+    ports:
+      - "5436:5432"
+    volumes:
+      - noon_pg_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U postgres"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  noon:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "16000:16000"
+      - "5679:5679"
+    volumes:
+      - .:/app
+    entrypoint: /app/bin/entrypoint.sh
+    env_file:
+      - .env
+    depends_on:
+      noon_pg:
+        condition: service_healthy
+  
+  redis:
+    image: redis:7
+    container_name: noon_redis
+    ports:
+      - "6679:6379"
+    volumes:
+      - redis_data:/data
+    command: ["redis-server", "--appendonly", "yes"]
+    restart: always
+
+volumes:
+  noon_pg_data:
+  redis_data:
