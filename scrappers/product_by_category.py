@@ -59,7 +59,7 @@ def extract_products_and_brands(data: dict):
                                 "name": brand_name,
                                 "code": brand_code
                             }
-            
+
             # Pattern 2: products inside 'data' list of the module
             items = m.get("data")
             if isinstance(items, list):
@@ -71,7 +71,7 @@ def extract_products_and_brands(data: dict):
                         page_products.append(p)
                         brand_name = p.get("brand")
                         brand_code = p.get("brandCode") or p.get("brand_code")
-                        
+
                         if brand_name:
                             page_brands[brand_name] = {
                                 "name": brand_name,
@@ -111,7 +111,7 @@ async def fetch_page_with_retry(category: str, page: int, retries: int = 3) -> d
             logger.warning(
                 f"Attempt {attempt}/{retries} for page {page} raised exception: {e}"
             )
-        
+
         # Exponential backoff
         await asyncio.sleep(2.0 * attempt)
 
@@ -121,7 +121,7 @@ async def fetch_page_with_retry(category: str, page: int, retries: int = 3) -> d
 async def scrape_category(category: str, output_dir: str):
     """Fetch all products and brands for the given category page by page."""
     logger.info(f"Starting crawl for category: {category}")
-    
+
     # Initialize fallback proxies before entering any session context
     init_fallback_proxies()
 
@@ -148,7 +148,7 @@ async def scrape_category(category: str, output_dir: str):
     for page in range(2, nb_pages + 1):
         # Polite spacing between requests
         await asyncio.sleep(1.0)
-        
+
         page_data = await fetch_page_with_retry(category, page)
         if not page_data:
             logger.error(f"Skipping page {page} due to persistent fetch failures.")
