@@ -1,15 +1,20 @@
-#It is not as simple as noon, we will be needing to do this with the help of selenium and a headless browser, as the search results are rendered client side and the API is not stable enough to be scraped directly. This script will be used to fetch the search results for a list of keywords and save them in a JSON file.
 import asyncio
 import json
 import os
 import random
+import sys
 import time
 from datetime import datetime
 from typing import Dict, List, Optional
 
 import aiofiles
-import requests  # Clean HTTP/1.1 connection pipeline
 from loguru import logger
+
+# Add root directory to python pathing
+sys.path.insert(0, os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
+
+from core.noon_session import NoonMinutesSession
+from proxy.proxy_manager import get_global_manager
 
 # ───────────────────────── CONFIG ─────────────────────────
 
@@ -18,76 +23,92 @@ BASE_SEARCH_URL = "https://minutes.noon.com/_svc/catalog/search"
 OUTPUT_DIR = "keyword_rankings_minutes"
 RESULTS_FILE = os.path.join(OUTPUT_DIR, "rankings.jsonl")
 
-# Minutes-specific headers
-HEADERS = {
-    'accept': 'application/json, text/plain, */*',
-    'accept-language': 'en-US,en;q=0.9',
-    'baggage': 'sentry-environment=production,sentry-release=mx-minutes-marketplace%402.26.0,sentry-public_key=225f4e76bf877875d48c1e162e8b8c89,sentry-trace_id=58c82021c0eb45e1b53ef8b765920fc4,sentry-sampled=true,sentry-sample_rand=0.08294159900802667,sentry-sample_rate=0.1',
-    'cache-control': 'no-cache, max-age=0, must-revalidate, no-store',
-    'pragma': 'no-cache',
-    'priority': 'u=1, i',
-    'referer': 'https://minutes.noon.com/uae-en/',
-    'sec-ch-ua': '"Chromium";v="148", "Google Chrome";v="148", "Not/A)Brand";v="99"',
-    'sec-ch-ua-mobile': '?0',
-    'sec-ch-ua-platform': '"macOS"',
-    'sec-fetch-dest': 'empty',
-    'sec-fetch-mode': 'cors',
-    'sec-fetch-site': 'same-origin',
-    'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/148.0.0.0 Safari/537.36',
-    'x-border-enabled': 'true',
-    'x-cms': 'v2',
-    'x-ecom-zonecode': 'AE_DXB-S3',
-    'x-experience': 'nooninstant',
-    'x-lat': '252174001',
-    'x-lng': '552798481',
-    'x-locale': 'en-ae',
-    'x-mp': 'nooninstant',
-    'x-mp-country': 'ae',
-    'x-nooninstant-zonecode': 'W00091092A',
-    'x-platform': 'mweb',
-    'x-rocket-enabled': 'true',
-    'x-visitor-id': '4d8ab649-b3c2-43a3-be65-589b50966789',
-}
+
+def init_fallback_proxies():
+    """Ensure the global proxy manager has proxies loaded from proxy/proxies.py."""
+    pm = get_global_manager()
+    status = pm.get_status()
+    if status.get("total_proxies", 0) == 0:
+        logger.info("No proxies loaded in global manager, attempting fallback from proxy/proxies.py...")
+        try:
+            from proxy.proxies import proxy_urls
+            total_proxies = []
+            for values in proxy_urls.values():
+                if values:
+                    total_proxies.extend(values)
+            loaded = pm.load_proxies_from_url_list(total_proxies)
+            logger.info(f"Successfully loaded {loaded} fallback proxies.")
+        except Exception as e:
+            logger.error(f"Failed to load fallback proxies: {e}")
+    else:
+        logger.info(f"Global proxy manager already has {status['total_proxies']} proxies loaded.")
+
 
 # ───────────────────────── SEARCH EXECUTOR ─────────────────────────
 
-def run_sync_request(params: dict) -> Optional[dict]:
-    """Runs a standard sequential HTTP/1.1 request via requests inside a thread worker."""
-    try:
-        response = requests.get(
-            url=BASE_SEARCH_URL,
-            headers=HEADERS,
-            params=params,
-            timeout=15
-        )
-        if response.status_code == 200:
-            return response.json()
-        logger.warning(f"[HTTP {response.status_code}] Dropped by backend validation.")
-        return None
-    except Exception as e:
-        logger.error(f"[REQUEST EXCEPTION] Thread worker pipeline failed -> {e}")
-        return None
-
-async def search_keyword(keyword: str, page: int = 1, limit: int = 50) -> Optional[Dict]:
+async def search_keyword(keyword: str, page: int = 1, limit: int = 50, retries: int = 3) -> Optional[Dict]:
     params = {
         "q": keyword,
         "page": page,
         "limit": limit,
     }
     logger.debug(f"[SEARCH] Indexing catalog targets for keyword='{keyword}' │ page={page}")
-    
-    return await asyncio.to_thread(run_sync_request, params)
+
+    for attempt in range(1, retries + 1):
+        try:
+            async with NoonMinutesSession() as session:
+                r = await session.get(BASE_SEARCH_URL, params=params)
+                if r.status_code == 200:
+                    return r.json()
+                else:
+                    logger.warning(
+                        f"Attempt {attempt}/{retries} for keyword '{keyword}' page {page} returned status {r.status_code}"
+                    )
+        except Exception as e:
+            logger.warning(
+                f"Attempt {attempt}/{retries} for keyword '{keyword}' page {page} raised exception: {e}"
+            )
+        
+        # Exponential backoff
+        await asyncio.sleep(2.0 * attempt)
+        
+    return None
+
 
 # ───────────────────────── PARSER & EXTRACTION ─────────────────────────
 
 def extract_rankings(keyword: str, search_data: Dict, page: int = 1) -> List[Dict]:
     rankings = []
     
-    # Minutes uses "products" instead of "hits"
-    hits = search_data.get("products", []) or search_data.get("hits", [])
+    # Extract products using robust strategy (direct products list or inside data list)
+    page_products = []
+    results = search_data.get("results", []) or []
+    for r in results:
+        modules = r.get("modules", []) or []
+        for m in modules:
+            # Pattern 1: products directly inside 'products' list of the module
+            products_list = m.get("products")
+            if isinstance(products_list, list):
+                for p in products_list:
+                    if isinstance(p, dict) and "sku" in p:
+                        page_products.append(p)
+            
+            # Pattern 2: products inside 'data' list of the module
+            items = m.get("data")
+            if isinstance(items, list):
+                for item in items:
+                    if not isinstance(item, dict):
+                        continue
+                    p = item.get("product")
+                    if isinstance(p, dict) and "sku" in p:
+                        page_products.append(p)
+                    elif "sku" in item:
+                        page_products.append(item)
 
-    for idx, product in enumerate(hits, start=1):
-        global_rank = ((page - 1) * 50) + idx
+    limit = search_data.get("search", {}).get("rows") or 50
+
+    for idx, product in enumerate(page_products, start=1):
+        global_rank = ((page - 1) * limit) + idx
 
         rank_data = {
             "timestamp": datetime.now().isoformat(),
@@ -95,26 +116,28 @@ def extract_rankings(keyword: str, search_data: Dict, page: int = 1) -> List[Dic
             "page": page,
             "position_on_page": idx,
             "global_rank": global_rank,
-            "product_id": product.get("id") or product.get("sku"),
+            "product_id": product.get("sku"),
             "product_name": product.get("title") or product.get("name"), 
             "product_sku": product.get("sku"),
-            "brand": product.get("brand") or product.get("brand_name"),
-            "price": product.get("price") or product.get("offer_price"),
-            "original_price": product.get("original_price") or product.get("was_price"),
-            "discount_percent": product.get("discount_percent") or product.get("discount"),
-            "rating": product.get("rating") or product.get("average_rating"),
-            "review_count": product.get("review_count") or product.get("number_of_reviews"),
-            "in_stock": product.get("is_in_stock") or product.get("in_stock") or product.get("is_available"),
-            "url": product.get("url") or product.get("slug"),
+            "brand": product.get("brand") or product.get("brandCode"),
+            "price": product.get("offerPrice") or product.get("price"),
+            "original_price": product.get("strikedPrice") or product.get("price"),
+            "discount_percent": product.get("discountPercent"),
+            "rating": product.get("rating"),
+            "review_count": product.get("reviewCount"),
+            "in_stock": product.get("isBuyable") or product.get("is_buyable", True),
+            "url": f"https://minutes.noon.com/uae-en/product/{product.get('sku')}" if product.get("sku") else None,
         }
         rankings.append(rank_data)
 
     return rankings
 
+
 async def save_ranking(rank_data: Dict) -> None:
     os.makedirs(OUTPUT_DIR, exist_ok=True)
     async with aiofiles.open(RESULTS_FILE, "a", encoding="utf-8") as f:
         await f.write(json.dumps(rank_data, ensure_ascii=False) + "\n")
+
 
 def print_rankings_summary(keyword: str, rankings: List[Dict], total_hits: int, total_pages: int) -> None:
     print(f"\n{'=' * 80}")
@@ -132,10 +155,15 @@ def print_rankings_summary(keyword: str, rankings: List[Dict], total_hits: int, 
         print(f"{rank['global_rank']:<6} {brand:<20} {name:<35} {price}")
     print(f"{'=' * 80}\n")
 
+
 # ───────────────────────── MAIN ENGINE RUNNER ─────────────────────────
 
 async def main():
     logger.info("Initializing stable sequential HTTP/1.1 keyword tracking engine for Minutes...")
+    
+    # Initialize fallback proxies before entering session context
+    init_fallback_proxies()
+
     keywords = ["banana", "milk", "bread"]
 
     for keyword in keywords:
@@ -144,15 +172,11 @@ async def main():
             logger.error(f"Timeline indexing skipped for vector: '{keyword}' due to connection drops.")
             continue
 
-        # Minutes API uses different field names
         total_hits = (
             search_data.get("nbHits") or 
-            search_data.get("total_products") or 
-            search_data.get("totalProducts") or 
-            len(search_data.get("products", [])) or 
             0
         )
-        total_pages = search_data.get("nbPages") or search_data.get("totalPages") or 1
+        total_pages = search_data.get("nbPages") or 1
 
         rankings = extract_rankings(keyword=keyword, search_data=search_data, page=1)
         
@@ -167,6 +191,7 @@ async def main():
         await asyncio.sleep(sleep_duration)
 
     logger.success(f"Tracking run complete! Data mapped into JSON Lines directly -> {RESULTS_FILE}")
+
 
 if __name__ == "__main__":
     try:
