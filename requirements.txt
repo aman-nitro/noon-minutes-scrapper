@@ -12,3 +12,4 @@ alembic
 curl_cffi
 requests
 dramatiq
+aiofiles==25.1.0
