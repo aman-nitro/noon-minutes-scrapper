@@ -3,7 +3,7 @@ from loguru import logger
 from proxy.proxy_client import ProxyClient, ProxyHTTPError
 from proxy.proxy_manager import ProxyManager, ProxyConfig, InMemoryStorage
 from proxy.proxies import proxy_urls
-from constants import NOON_BASE_URL
+from constants.db import NOON_BASE_URL
 
 NOON_CATEGORY_ENDPOINT = NOON_BASE_URL + "/category"
 

@@ -1,6 +1,6 @@
 from sqlalchemy.ext.asyncio import create_async_engine, async_sessionmaker
 from contextlib import contextmanager
-from constants import NOON_PG_DATABASE_URL, NOON_REDIS_DB, NOON_REDIS_HOST, NOON_REDIS_PASSWORD, NOON_REDIS_PORT
+from constants.db import NOON_PG_DATABASE_URL, NOON_REDIS_DB, NOON_REDIS_HOST, NOON_REDIS_PASSWORD, NOON_REDIS_PORT
 import redis.asyncio as redis
 from loguru import logger
 

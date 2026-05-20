@@ -6,7 +6,7 @@ from proxy.proxy_client import ProxyClient
 from proxy.proxy_manager import ProxyManager, ProxyConfig, InMemoryStorage
 from proxy.proxies import proxy_urls
 
-from constants import NOON_BASE_URL
+from constants.db import NOON_BASE_URL
 
 PAGE_LIMIT = 100
 MAX_PAGES_CONCURRENT = 10
