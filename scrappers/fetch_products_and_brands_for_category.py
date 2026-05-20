@@ -71,6 +71,7 @@ def extract_products_and_brands(data: dict):
                         page_products.append(p)
                         brand_name = p.get("brand")
                         brand_code = p.get("brandCode") or p.get("brand_code")
+                        
                         if brand_name:
                             page_brands[brand_name] = {
                                 "name": brand_name,
