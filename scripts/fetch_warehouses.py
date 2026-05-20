@@ -20,24 +20,32 @@ from proxy.proxies import proxy_urls
 # CONFIG
 # ============================================================
 
-OUTPUT_FILE = "warehouses.json"
+OUTPUT_FILE = "minutes_warehouses.json"
 MAX_CONCURRENT = 15  # Low concurrency ensures Akamai doesn't trigger bot protection
 
-GEO_URL = "https://www.noon.com/_vs/st/mp-identity-api/serviceable-geo-info/by-location"
-WHOAMI_URL = "https://www.noon.com/_vs/st/st-whoami-api-web/whoami/noon"
+GEO_URL = "https://minutes.noon.com/_svc/mp-identity-api/serviceable-geo-info/by-location"
+SET_LOCATION_URL = "https://minutes.noon.com/_svc/mp-identity-api/address/set-location"
+WHOAMI_URL = "https://minutes.noon.com/_vs/st/st-whoami-api-web/whoami"
 
 HEADERS = {
     "accept": "application/json, text/plain, */*",
     "accept-language": "en-US,en;q=0.9",
     "content-type": "application/json",
-    "origin": "https://www.noon.com",
-    "referer": "https://www.noon.com/uae-en/",
+    "origin": "https://minutes.noon.com",
+    "referer": "https://minutes.noon.com/uae-en/",
     "user-agent": (
         "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) "
         "AppleWebKit/537.36 (KHTML, like Gecko) "
         "Chrome/120.0.0.0 Safari/537.36"
     ),
-    "x-platform": "web", "x-locale": "en-ae", "x-mp-country": "ae",
+    "x-platform": "web",
+    "x-locale": "en-ae",
+    "x-mp-country": "ae",
+    "x-mp": "nooninstant",
+    "x-experience": "nooninstant",
+    "x-cms": "v2",
+    "x-border-enabled": "true",
+    "cache-control": "no-cache, max-age=0, must-revalidate, no-store",
 }
 
 # Targeted residential corridors
@@ -104,7 +112,7 @@ async def fetch_warehouse(client: ProxyClient, lat: float, lng: float) -> Option
             }
 
             set_loc_response = await session.post(
-                url="https://www.noon.com/_vs/st/mp-identity-api/address/set-location",
+                url=SET_LOCATION_URL,
                 json=set_loc_payload,
                 headers=HEADERS,
                 proxies=proxies_dict
@@ -131,25 +139,37 @@ async def fetch_warehouse(client: ProxyClient, lat: float, lng: float) -> Option
             whoami_data = whoami_response.json()
             resp_headers = whoami_data.get("headers", {})
             
+            # For minutes.noon.com, extract x-nooninstant-zonecode
+            nooninstant_zone = resp_headers.get("x-nooninstant-zonecode")
             ecom_zone = resp_headers.get("x-ecom-zonecode")
             rocket_zone = resp_headers.get("x-rocket-zonecode")
 
-            if isinstance(ecom_zone, list) and ecom_zone: ecom_zone = ecom_zone[0]
-            if isinstance(rocket_zone, list) and rocket_zone: rocket_zone = rocket_zone[0]
+            if isinstance(nooninstant_zone, list) and nooninstant_zone: 
+                nooninstant_zone = nooninstant_zone[0]
+            if isinstance(ecom_zone, list) and ecom_zone: 
+                ecom_zone = ecom_zone[0]
+            if isinstance(rocket_zone, list) and rocket_zone: 
+                rocket_zone = rocket_zone[0]
 
-            if not ecom_zone: ecom_zone = whoami_response.headers.get("x-ecom-zonecode")
-            if not rocket_zone: rocket_zone = whoami_response.headers.get("x-rocket-zonecode")
+            if not nooninstant_zone: 
+                nooninstant_zone = whoami_response.headers.get("x-nooninstant-zonecode")
+            if not ecom_zone: 
+                ecom_zone = whoami_response.headers.get("x-ecom-zonecode")
+            if not rocket_zone: 
+                rocket_zone = whoami_response.headers.get("x-rocket-zonecode")
 
-            if not ecom_zone:
+            # Primary zone for Minutes is nooninstant
+            if not nooninstant_zone:
                 client.manager.release_proxy(proxy.id)
                 return None
 
-            logger.success(f"[SUCCESS] Discovered Hub: {ecom_zone} -> {area_value}")
+            logger.success(f"[SUCCESS] Discovered Hub: {nooninstant_zone} -> {area_value}")
             client.manager.mark_success(proxy.id)
             
             return {
-                "warehouse_key": ecom_zone,
-                "ecom": ecom_zone,
+                "warehouse_key": nooninstant_zone,
+                "nooninstant": nooninstant_zone,
+                "ecom": ecom_zone if ecom_zone else None,
                 "rocket": rocket_zone if rocket_zone else None,
                 "area": area_value,
                 "lat": lat,
@@ -173,7 +193,7 @@ async def worker(semaphore: asyncio.Semaphore, client: ProxyClient, lat: float, 
 # ============================================================
 
 async def main():
-    logger.info("Initializing isolated-session warehouse scroller...")
+    logger.info("Initializing isolated-session warehouse scroller for Minutes...")
     started = time.time()
 
     config = ProxyConfig()
@@ -187,8 +207,8 @@ async def main():
     client = ProxyClient(config=config, proxy_manager=proxy_manager)
     semaphore = asyncio.Semaphore(MAX_CONCURRENT)
 
-    # 0.1km increments balances speed and coverage density
-    step = 0.001 
+    # 5km increments balances speed and coverage density
+    step = 0.05
     tasks = []
 
     for box in URBAN_BOXES:
@@ -223,7 +243,7 @@ async def main():
     await client.close_all_sessions()
 
     logger.info("══════════════════════════════")
-    logger.info("WAREHOUSE SCROLLER COMPLETE")
+    logger.info("WAREHOUSE SCROLLER COMPLETE (MINUTES)")
     logger.info(f"Total Grid Nodes Checked={len(tasks)}")
     logger.info(f"Unique Active Warehouses Extracted={len(final_dictionary_map)}")
     logger.info(f"Saved directly to file={OUTPUT_FILE}")

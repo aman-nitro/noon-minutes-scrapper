@@ -1,0 +1,524 @@
+{
+    "W00089031A": {
+        "warehouse_key": "W00089031A",
+        "nooninstant": "W00089031A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.95_Lng:55.2",
+        "lat": 24.95,
+        "lng": 55.2
+    },
+    "W00836404AE": {
+        "warehouse_key": "W00836404AE",
+        "nooninstant": "W00836404AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.0_Lng:55.1",
+        "lat": 25.0,
+        "lng": 55.1
+    },
+    "W00048740A": {
+        "warehouse_key": "W00048740A",
+        "nooninstant": "W00048740A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.0_Lng:55.15",
+        "lat": 25.0,
+        "lng": 55.15
+    },
+    "W00089032A": {
+        "warehouse_key": "W00089032A",
+        "nooninstant": "W00089032A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.0_Lng:55.25",
+        "lat": 25.0,
+        "lng": 55.25
+    },
+    "W00000124A": {
+        "warehouse_key": "W00000124A",
+        "nooninstant": "W00000124A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.0_Lng:55.3",
+        "lat": 25.0,
+        "lng": 55.3
+    },
+    "W00054249A": {
+        "warehouse_key": "W00054249A",
+        "nooninstant": "W00054249A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.05_Lng:55.15",
+        "lat": 25.05,
+        "lng": 55.15
+    },
+    "W00824374AE": {
+        "warehouse_key": "W00824374AE",
+        "nooninstant": "W00824374AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.05_Lng:55.2",
+        "lat": 25.05,
+        "lng": 55.2
+    },
+    "W00000165A": {
+        "warehouse_key": "W00000165A",
+        "nooninstant": "W00000165A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.05_Lng:55.25",
+        "lat": 25.05,
+        "lng": 55.25
+    },
+    "W00079243A": {
+        "warehouse_key": "W00079243A",
+        "nooninstant": "W00079243A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.1_Lng:55.2",
+        "lat": 25.1,
+        "lng": 55.2
+    },
+    "W00048862A": {
+        "warehouse_key": "W00048862A",
+        "nooninstant": "W00048862A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.1_Lng:55.25",
+        "lat": 25.1,
+        "lng": 55.25
+    },
+    "W00109191A": {
+        "warehouse_key": "W00109191A",
+        "nooninstant": "W00109191A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.1_Lng:55.35",
+        "lat": 25.1,
+        "lng": 55.35
+    },
+    "W00079241A": {
+        "warehouse_key": "W00079241A",
+        "nooninstant": "W00079241A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.1_Lng:55.4",
+        "lat": 25.1,
+        "lng": 55.4
+    },
+    "W00085830A": {
+        "warehouse_key": "W00085830A",
+        "nooninstant": "W00085830A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.15_Lng:55.2",
+        "lat": 25.15,
+        "lng": 55.2
+    },
+    "W00095286A": {
+        "warehouse_key": "W00095286A",
+        "nooninstant": "W00095286A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.15_Lng:55.25",
+        "lat": 25.15,
+        "lng": 55.25
+    },
+    "W00109192A": {
+        "warehouse_key": "W00109192A",
+        "nooninstant": "W00109192A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.15_Lng:55.3",
+        "lat": 25.15,
+        "lng": 55.3
+    },
+    "W00109193A": {
+        "warehouse_key": "W00109193A",
+        "nooninstant": "W00109193A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.15_Lng:55.35",
+        "lat": 25.15,
+        "lng": 55.35
+    },
+    "W00109197A": {
+        "warehouse_key": "W00109197A",
+        "nooninstant": "W00109197A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.15_Lng:55.45",
+        "lat": 25.15,
+        "lng": 55.45
+    },
+    "W00048739A": {
+        "warehouse_key": "W00048739A",
+        "nooninstant": "W00048739A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.25_Lng:55.5",
+        "lat": 25.25,
+        "lng": 55.5
+    },
+    "W00057187A": {
+        "warehouse_key": "W00057187A",
+        "nooninstant": "W00057187A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.2_Lng:55.25",
+        "lat": 25.2,
+        "lng": 55.25
+    },
+    "W00000147A": {
+        "warehouse_key": "W00000147A",
+        "nooninstant": "W00000147A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.2_Lng:55.3",
+        "lat": 25.2,
+        "lng": 55.3
+    },
+    "W00057193A": {
+        "warehouse_key": "W00057193A",
+        "nooninstant": "W00057193A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.2_Lng:55.35",
+        "lat": 25.2,
+        "lng": 55.35
+    },
+    "W00054690A": {
+        "warehouse_key": "W00054690A",
+        "nooninstant": "W00054690A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.2_Lng:55.4",
+        "lat": 25.2,
+        "lng": 55.4
+    },
+    "W00057190A": {
+        "warehouse_key": "W00057190A",
+        "nooninstant": "W00057190A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.25_Lng:55.45",
+        "lat": 25.25,
+        "lng": 55.45
+    },
+    "W00817832AE": {
+        "warehouse_key": "W00817832AE",
+        "nooninstant": "W00817832AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.25_Lng:55.3",
+        "lat": 25.25,
+        "lng": 55.3
+    },
+    "W00826376AE": {
+        "warehouse_key": "W00826376AE",
+        "nooninstant": "W00826376AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.25_Lng:55.4",
+        "lat": 25.25,
+        "lng": 55.4
+    },
+    "W00842125AE": {
+        "warehouse_key": "W00842125AE",
+        "nooninstant": "W00842125AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.25_Lng:55.6",
+        "lat": 25.25,
+        "lng": 55.6
+    },
+    "W00813270AE": {
+        "warehouse_key": "W00813270AE",
+        "nooninstant": "W00813270AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.3_Lng:55.35",
+        "lat": 25.3,
+        "lng": 55.35
+    },
+    "W00813851AE": {
+        "warehouse_key": "W00813851AE",
+        "nooninstant": "W00813851AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.3_Lng:55.4",
+        "lat": 25.3,
+        "lng": 55.4
+    },
+    "W00046515A": {
+        "warehouse_key": "W00046515A",
+        "nooninstant": "W00046515A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.3_Lng:55.45",
+        "lat": 25.3,
+        "lng": 55.45
+    },
+    "W00831898AE": {
+        "warehouse_key": "W00831898AE",
+        "nooninstant": "W00831898AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.3_Lng:55.5",
+        "lat": 25.3,
+        "lng": 55.5
+    },
+    "W00842131AE": {
+        "warehouse_key": "W00842131AE",
+        "nooninstant": "W00842131AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.35_Lng:55.4",
+        "lat": 25.35,
+        "lng": 55.4
+    },
+    "W00046516A": {
+        "warehouse_key": "W00046516A",
+        "nooninstant": "W00046516A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.35_Lng:55.45",
+        "lat": 25.35,
+        "lng": 55.45
+    },
+    "W00048741A": {
+        "warehouse_key": "W00048741A",
+        "nooninstant": "W00048741A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.4_Lng:55.45",
+        "lat": 25.4,
+        "lng": 55.45
+    },
+    "W00048742A": {
+        "warehouse_key": "W00048742A",
+        "nooninstant": "W00048742A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.4_Lng:55.5",
+        "lat": 25.4,
+        "lng": 55.5
+    },
+    "W00818342AE": {
+        "warehouse_key": "W00818342AE",
+        "nooninstant": "W00818342AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.4_Lng:55.55",
+        "lat": 25.4,
+        "lng": 55.55
+    },
+    "W00831897AE": {
+        "warehouse_key": "W00831897AE",
+        "nooninstant": "W00831897AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.4_Lng:55.6",
+        "lat": 25.4,
+        "lng": 55.6
+    },
+    "W00058871A": {
+        "warehouse_key": "W00058871A",
+        "nooninstant": "W00058871A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.5_Lng:55.55",
+        "lat": 25.5,
+        "lng": 55.55
+    },
+    "W00106303A": {
+        "warehouse_key": "W00106303A",
+        "nooninstant": "W00106303A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:25.5_Lng:55.6",
+        "lat": 25.5,
+        "lng": 55.6
+    },
+    "W00838971AE": {
+        "warehouse_key": "W00838971AE",
+        "nooninstant": "W00838971AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.3_Lng:54.6",
+        "lat": 24.3,
+        "lng": 54.6
+    },
+    "W00085834A": {
+        "warehouse_key": "W00085834A",
+        "nooninstant": "W00085834A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.3_Lng:54.55",
+        "lat": 24.3,
+        "lng": 54.55
+    },
+    "W00109196A": {
+        "warehouse_key": "W00109196A",
+        "nooninstant": "W00109196A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.3_Lng:54.65",
+        "lat": 24.3,
+        "lng": 54.65
+    },
+    "W00056604A": {
+        "warehouse_key": "W00056604A",
+        "nooninstant": "W00056604A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.35_Lng:54.55",
+        "lat": 24.35,
+        "lng": 54.55
+    },
+    "W00093526A": {
+        "warehouse_key": "W00093526A",
+        "nooninstant": "W00093526A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.4_Lng:54.65",
+        "lat": 24.4,
+        "lng": 54.65
+    },
+    "W00821731AE": {
+        "warehouse_key": "W00821731AE",
+        "nooninstant": "W00821731AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.35_Lng:54.65",
+        "lat": 24.35,
+        "lng": 54.65
+    },
+    "W00057194A": {
+        "warehouse_key": "W00057194A",
+        "nooninstant": "W00057194A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.35_Lng:54.7",
+        "lat": 24.35,
+        "lng": 54.7
+    },
+    "W00048743A": {
+        "warehouse_key": "W00048743A",
+        "nooninstant": "W00048743A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.4_Lng:54.5",
+        "lat": 24.4,
+        "lng": 54.5
+    },
+    "W00821730AE": {
+        "warehouse_key": "W00821730AE",
+        "nooninstant": "W00821730AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.4_Lng:54.55",
+        "lat": 24.4,
+        "lng": 54.55
+    },
+    "W00830324AE": {
+        "warehouse_key": "W00830324AE",
+        "nooninstant": "W00830324AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.4_Lng:54.75",
+        "lat": 24.4,
+        "lng": 54.75
+    },
+    "W00809697AE": {
+        "warehouse_key": "W00809697AE",
+        "nooninstant": "W00809697AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.45_Lng:54.35",
+        "lat": 24.45,
+        "lng": 54.35
+    },
+    "W00109200A": {
+        "warehouse_key": "W00109200A",
+        "nooninstant": "W00109200A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.45_Lng:54.4",
+        "lat": 24.45,
+        "lng": 54.4
+    },
+    "W00057195A": {
+        "warehouse_key": "W00057195A",
+        "nooninstant": "W00057195A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.45_Lng:54.6",
+        "lat": 24.45,
+        "lng": 54.6
+    },
+    "W00119042A": {
+        "warehouse_key": "W00119042A",
+        "nooninstant": "W00119042A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.45_Lng:54.75",
+        "lat": 24.45,
+        "lng": 54.75
+    },
+    "W00818339AE": {
+        "warehouse_key": "W00818339AE",
+        "nooninstant": "W00818339AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.5_Lng:54.4",
+        "lat": 24.5,
+        "lng": 54.4
+    },
+    "W00056603A": {
+        "warehouse_key": "W00056603A",
+        "nooninstant": "W00056603A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.55_Lng:54.7",
+        "lat": 24.55,
+        "lng": 54.7
+    },
+    "W00099707A": {
+        "warehouse_key": "W00099707A",
+        "nooninstant": "W00099707A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.2_Lng:55.65",
+        "lat": 24.2,
+        "lng": 55.65
+    },
+    "W00099703A": {
+        "warehouse_key": "W00099703A",
+        "nooninstant": "W00099703A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.2_Lng:55.8",
+        "lat": 24.2,
+        "lng": 55.8
+    },
+    "W00060243A": {
+        "warehouse_key": "W00060243A",
+        "nooninstant": "W00060243A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.25_Lng:55.7",
+        "lat": 24.25,
+        "lng": 55.7
+    },
+    "W00065903A": {
+        "warehouse_key": "W00065903A",
+        "nooninstant": "W00065903A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Lat:24.25_Lng:55.75",
+        "lat": 24.25,
+        "lng": 55.75
+    }
+}
