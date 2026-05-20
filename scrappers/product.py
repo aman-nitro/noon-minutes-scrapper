@@ -51,4 +51,9 @@ class NoonProductScraper:
 
             if not first:
                 break
+
+            import json
+            with open(f"output/results_{page}.json", "w") as f:
+                json.dump(first, f, indent=4)
+
         return first
