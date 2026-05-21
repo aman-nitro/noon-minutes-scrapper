@@ -2,7 +2,7 @@ import asyncio
 from loguru import logger
 
 from core.noon_session import NoonMinutesSession
-from constants.noon import NOON_BASE_URL
+from constants.db import NOON_BASE_URL
 
 PAGE_LIMIT = 100
 
