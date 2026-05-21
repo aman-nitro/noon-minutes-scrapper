@@ -3,6 +3,8 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from sqlalchemy.future import select
 from sqlalchemy.exc import SQLAlchemyError
 from models.product import NoonProduct
+from sqlalchemy.dialects.postgresql import insert
+from sqlalchemy import func
 
 
 class NoonProductController:
@@ -110,3 +112,32 @@ class NoonProductController:
         except SQLAlchemyError as exc:
             await db.rollback()
             raise RuntimeError(f"Failed to delete NoonProducts for brand {brand_id}: {exc}") from exc
+    
+    @staticmethod
+    async def upsert(db: AsyncSession,**kwargs) -> NoonProduct:
+        stmt = insert(NoonProduct).values(**kwargs)
+
+        update_fields = {
+            "name": stmt.excluded.name,
+            "brandId": stmt.excluded.brandId,
+            "product_url": stmt.excluded.product_url,
+            "imageUrl": stmt.excluded.imageUrl,
+            "price": stmt.excluded.price,
+            "inventory": stmt.excluded.inventory,
+            "categoryId": stmt.excluded.categoryId,
+            "subCategoryId": stmt.excluded.subCategoryId,
+            "merchant_name": stmt.excluded.merchant_name,
+            "updatedAt": func.now(),
+        }
+
+        stmt = stmt.on_conflict_do_update(index_elements=["sku"],set_=update_fields).returning(NoonProduct)
+
+        try:
+            result = await db.execute(stmt)
+            
+
+        except SQLAlchemyError as exc:
+            await db.rollback()
+            raise RuntimeError(
+                f"Failed to upsert NoonProduct: {exc}"
+            ) from exc

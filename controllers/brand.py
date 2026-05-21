@@ -3,15 +3,15 @@ from sqlalchemy.ext.asyncio import AsyncSession
 from models.brand import NoonBrand
 
 
-class NoonBrandService:
+class NoonBrandController:
 
     @staticmethod
     async def create(db: AsyncSession, name: str):
         brand = NoonBrand(name=name)
 
         db.add(brand)
-        await db.commit()
-        await db.refresh(brand)
+        # await db.commit()
+        # await db.refresh(brand)
         return brand
 
     @staticmethod

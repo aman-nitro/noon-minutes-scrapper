@@ -1,6 +1,6 @@
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
-from api import category
+from api import category, product
 import utils.dramatiq
 
 
@@ -19,7 +19,7 @@ app.add_middleware(
 )
 
 app.include_router(category.router, prefix='/api', tags=['category'])
-# app.include_router(product.router, prefix='/api', tags=['product'])
+app.include_router(product.router, prefix='/api', tags=['product'])
 
 
 @app.get('/')
