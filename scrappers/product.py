@@ -23,7 +23,7 @@ class NoonProductScraper:
     async def fetch_page(self, tag: str, page: int = 1) -> dict | None:
         url = f"{NOON_BASE_URL}/_svc/catalog/search"
         params = {
-            # "f[tag]": tag,
+            "f[tag]": tag,
             "limit": PAGE_LIMIT,
             "page": page,
         }

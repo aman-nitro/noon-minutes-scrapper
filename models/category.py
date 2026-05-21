@@ -12,10 +12,10 @@ class NoonCategory(Base):
     __tablename__ = "noon_category"
 
     id = Column(Integer, primary_key=True, index=True)
-    categoryId = Column(Integer,nullable=False)
+    categoryId = Column(Text,nullable=False)
     categoryName = Column(Text,nullable=False)
 
-    subCategoryId = Column(Integer,nullable=False)
+    subCategoryId = Column(Text,nullable=False)
     subCategoryName = Column(Text,nullable=False)
 
     createdAt = Column(DateTime,nullable=False,server_default=func.now())

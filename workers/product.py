@@ -3,7 +3,7 @@ from loguru import logger
 from sqlalchemy.dialects.postgresql import insert
 from sqlalchemy.sql import func
 
-from scrappers.product import NoonProductScraper
+from scrappers.product_by_category import NoonProductScraper
 from controllers.category import NoonCategoryController
 from models.product import NoonProduct
 from models.merchant import NoonMerchant
