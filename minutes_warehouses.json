@@ -1,128 +1,56 @@
 {
-    "W00089031A": {
-        "warehouse_key": "W00089031A",
-        "nooninstant": "W00089031A",
+    "W00836400AE": {
+        "warehouse_key": "W00836400AE",
+        "nooninstant": "W00836400AE",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:24.95_Lng:55.2",
-        "lat": 24.95,
-        "lng": 55.2
-    },
-    "W00836404AE": {
-        "warehouse_key": "W00836404AE",
-        "nooninstant": "W00836404AE",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.0_Lng:55.1",
-        "lat": 25.0,
-        "lng": 55.1
-    },
-    "W00048740A": {
-        "warehouse_key": "W00048740A",
-        "nooninstant": "W00048740A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.0_Lng:55.15",
-        "lat": 25.0,
-        "lng": 55.15
-    },
-    "W00089032A": {
-        "warehouse_key": "W00089032A",
-        "nooninstant": "W00089032A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.0_Lng:55.25",
-        "lat": 25.0,
-        "lng": 55.25
-    },
-    "W00000124A": {
-        "warehouse_key": "W00000124A",
-        "nooninstant": "W00000124A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.0_Lng:55.3",
-        "lat": 25.0,
+        "area": "Al Karama",
+        "lat": 25.245,
         "lng": 55.3
     },
-    "W00054249A": {
-        "warehouse_key": "W00054249A",
-        "nooninstant": "W00054249A",
+    "W00809698AE": {
+        "warehouse_key": "W00809698AE",
+        "nooninstant": "W00809698AE",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.05_Lng:55.15",
-        "lat": 25.05,
-        "lng": 55.15
-    },
-    "W00824374AE": {
-        "warehouse_key": "W00824374AE",
-        "nooninstant": "W00824374AE",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.05_Lng:55.2",
-        "lat": 25.05,
-        "lng": 55.2
-    },
-    "W00000165A": {
-        "warehouse_key": "W00000165A",
-        "nooninstant": "W00000165A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.05_Lng:55.25",
-        "lat": 25.05,
-        "lng": 55.25
-    },
-    "W00079243A": {
-        "warehouse_key": "W00079243A",
-        "nooninstant": "W00079243A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.1_Lng:55.2",
-        "lat": 25.1,
-        "lng": 55.2
-    },
-    "W00048862A": {
-        "warehouse_key": "W00048862A",
-        "nooninstant": "W00048862A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.1_Lng:55.25",
-        "lat": 25.1,
-        "lng": 55.25
-    },
-    "W00109191A": {
-        "warehouse_key": "W00109191A",
-        "nooninstant": "W00109191A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.1_Lng:55.35",
-        "lat": 25.1,
+        "area": "Al Garhoud",
+        "lat": 25.245,
         "lng": 55.35
     },
-    "W00079241A": {
-        "warehouse_key": "W00079241A",
-        "nooninstant": "W00079241A",
+    "W00106309A": {
+        "warehouse_key": "W00106309A",
+        "nooninstant": "W00106309A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.1_Lng:55.4",
-        "lat": 25.1,
-        "lng": 55.4
+        "area": "Jumeirah 1",
+        "lat": 25.23,
+        "lng": 55.26
     },
-    "W00085830A": {
-        "warehouse_key": "W00085830A",
-        "nooninstant": "W00085830A",
+    "W00048864A": {
+        "warehouse_key": "W00048864A",
+        "nooninstant": "W00048864A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.15_Lng:55.2",
-        "lat": 25.15,
-        "lng": 55.2
+        "area": "Zaabeel 1",
+        "lat": 25.225,
+        "lng": 55.3
     },
-    "W00095286A": {
-        "warehouse_key": "W00095286A",
-        "nooninstant": "W00095286A",
+    "W00109199A": {
+        "warehouse_key": "W00109199A",
+        "nooninstant": "W00109199A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.15_Lng:55.25",
-        "lat": 25.15,
+        "area": "Dubai, United Arab Emirates",
+        "lat": 25.21,
+        "lng": 55.32
+    },
+    "W00115335A": {
+        "warehouse_key": "W00115335A",
+        "nooninstant": "W00115335A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Quoz 1",
+        "lat": 25.17,
         "lng": 55.25
     },
     "W00109192A": {
@@ -130,71 +58,215 @@
         "nooninstant": "W00109192A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.15_Lng:55.3",
-        "lat": 25.15,
-        "lng": 55.3
-    },
-    "W00109193A": {
-        "warehouse_key": "W00109193A",
-        "nooninstant": "W00109193A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.15_Lng:55.35",
-        "lat": 25.15,
-        "lng": 55.35
-    },
-    "W00109197A": {
-        "warehouse_key": "W00109197A",
-        "nooninstant": "W00109197A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.15_Lng:55.45",
-        "lat": 25.15,
-        "lng": 55.45
-    },
-    "W00048739A": {
-        "warehouse_key": "W00048739A",
-        "nooninstant": "W00048739A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.25_Lng:55.5",
-        "lat": 25.25,
-        "lng": 55.5
+        "area": "Mohammed Bin Rashid City District One",
+        "lat": 25.16,
+        "lng": 55.28
     },
     "W00057187A": {
         "warehouse_key": "W00057187A",
         "nooninstant": "W00057187A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.2_Lng:55.25",
-        "lat": 25.2,
-        "lng": 55.25
+        "area": "Al Wasl",
+        "lat": 25.195,
+        "lng": 55.255
     },
-    "W00000147A": {
-        "warehouse_key": "W00000147A",
-        "nooninstant": "W00000147A",
+    "W00050759A": {
+        "warehouse_key": "W00050759A",
+        "nooninstant": "W00050759A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.2_Lng:55.3",
-        "lat": 25.2,
+        "area": "Business Bay",
+        "lat": 25.19,
+        "lng": 55.26
+    },
+    "W00085830A": {
+        "warehouse_key": "W00085830A",
+        "nooninstant": "W00085830A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Sheikh Villas",
+        "lat": 25.13,
+        "lng": 55.18
+    },
+    "W00095286A": {
+        "warehouse_key": "W00095286A",
+        "nooninstant": "W00095286A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Quoz",
+        "lat": 25.14,
+        "lng": 55.27
+    },
+    "W00091092A": {
+        "warehouse_key": "W00091092A",
+        "nooninstant": "W00091092A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Gate Avenue",
+        "lat": 25.21,
+        "lng": 55.28
+    },
+    "W00813854AE": {
+        "warehouse_key": "W00813854AE",
+        "nooninstant": "W00813854AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Community Jabal Ali 1",
+        "lat": 25.045,
+        "lng": 55.15
+    },
+    "W00054249A": {
+        "warehouse_key": "W00054249A",
+        "nooninstant": "W00054249A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Thanyah 2",
+        "lat": 25.08,
+        "lng": 55.18
+    },
+    "W00836402AE": {
+        "warehouse_key": "W00836402AE",
+        "nooninstant": "W00836402AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "The Greens",
+        "lat": 25.095,
+        "lng": 55.17
+    },
+    "W00060246A": {
+        "warehouse_key": "W00060246A",
+        "nooninstant": "W00060246A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Community Jabal Ali 1",
+        "lat": 25.03,
+        "lng": 55.16
+    },
+    "W00057191A": {
+        "warehouse_key": "W00057191A",
+        "nooninstant": "W00057191A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Victory Heights",
+        "lat": 25.03,
+        "lng": 55.21
+    },
+    "W00000165A": {
+        "warehouse_key": "W00000165A",
+        "nooninstant": "W00000165A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Green Community Motor City",
+        "lat": 25.04,
+        "lng": 55.24
+    },
+    "W00079243A": {
+        "warehouse_key": "W00079243A",
+        "nooninstant": "W00079243A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Barsha 2",
+        "lat": 25.09,
+        "lng": 55.22
+    },
+    "W00057638A": {
+        "warehouse_key": "W00057638A",
+        "nooninstant": "W00057638A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Barsha South 1",
+        "lat": 25.09,
+        "lng": 55.24
+    },
+    "W00089032A": {
+        "warehouse_key": "W00089032A",
+        "nooninstant": "W00089032A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Veneto",
+        "lat": 25.03,
+        "lng": 55.26
+    },
+    "W00060248A": {
+        "warehouse_key": "W00060248A",
+        "nooninstant": "W00060248A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "JVC District 14",
+        "lat": 25.045,
+        "lng": 55.2
+    },
+    "W00085832A": {
+        "warehouse_key": "W00085832A",
+        "nooninstant": "W00085832A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Mira Oasis 3",
+        "lat": 25.01,
         "lng": 55.3
     },
-    "W00057193A": {
-        "warehouse_key": "W00057193A",
-        "nooninstant": "W00057193A",
+    "W00115334A": {
+        "warehouse_key": "W00115334A",
+        "nooninstant": "W00115334A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.2_Lng:55.35",
-        "lat": 25.2,
+        "area": "Hadaeq Sheikh Mohammed Bin Rashid",
+        "lat": 25.06,
+        "lng": 55.25
+    },
+    "W00109191A": {
+        "warehouse_key": "W00109191A",
+        "nooninstant": "W00109191A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Falcon City of Wonders",
+        "lat": 25.09,
         "lng": 55.35
+    },
+    "W00106310A": {
+        "warehouse_key": "W00106310A",
+        "nooninstant": "W00106310A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Barsha South 2",
+        "lat": 25.08,
+        "lng": 55.23
+    },
+    "W00125022A": {
+        "warehouse_key": "W00125022A",
+        "nooninstant": "W00125022A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Quoz Industrial 1",
+        "lat": 25.14,
+        "lng": 55.22
+    },
+    "W00115336A": {
+        "warehouse_key": "W00115336A",
+        "nooninstant": "W00115336A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Nadd Al Hamar",
+        "lat": 25.19,
+        "lng": 55.38
     },
     "W00054690A": {
         "warehouse_key": "W00054690A",
         "nooninstant": "W00054690A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.2_Lng:55.4",
-        "lat": 25.2,
+        "area": "Al Warqa'A 3",
+        "lat": 25.19,
+        "lng": 55.42
+    },
+    "W00826376AE": {
+        "warehouse_key": "W00826376AE",
+        "nooninstant": "W00826376AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Twar 3",
+        "lat": 25.25,
         "lng": 55.4
     },
     "W00057190A": {
@@ -202,323 +274,323 @@
         "nooninstant": "W00057190A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.25_Lng:55.45",
-        "lat": 25.25,
-        "lng": 55.45
+        "area": "Al Mizhar 1",
+        "lat": 25.24,
+        "lng": 55.44
     },
-    "W00817832AE": {
-        "warehouse_key": "W00817832AE",
-        "nooninstant": "W00817832AE",
+    "W00109193A": {
+        "warehouse_key": "W00109193A",
+        "nooninstant": "W00109193A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.25_Lng:55.3",
-        "lat": 25.25,
-        "lng": 55.3
+        "area": "Dubai, United Arab Emirates",
+        "lat": 25.15,
+        "lng": 55.36
     },
-    "W00826376AE": {
-        "warehouse_key": "W00826376AE",
-        "nooninstant": "W00826376AE",
+    "W00109197A": {
+        "warehouse_key": "W00109197A",
+        "nooninstant": "W00109197A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.25_Lng:55.4",
-        "lat": 25.25,
-        "lng": 55.4
+        "area": "Warsan 4",
+        "lat": 25.14,
+        "lng": 55.42
     },
-    "W00842125AE": {
-        "warehouse_key": "W00842125AE",
-        "nooninstant": "W00842125AE",
+    "W00048739A": {
+        "warehouse_key": "W00048739A",
+        "nooninstant": "W00048739A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.25_Lng:55.6",
-        "lat": 25.25,
-        "lng": 55.6
+        "area": "Community Wadi Alamardi",
+        "lat": 25.19,
+        "lng": 55.52
     },
-    "W00813270AE": {
-        "warehouse_key": "W00813270AE",
-        "nooninstant": "W00813270AE",
+    "W00813271AE": {
+        "warehouse_key": "W00813271AE",
+        "nooninstant": "W00813271AE",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.3_Lng:55.35",
-        "lat": 25.3,
-        "lng": 55.35
+        "area": "Wadi Al Safa 2",
+        "lat": 25.1,
+        "lng": 55.36
     },
-    "W00813851AE": {
-        "warehouse_key": "W00813851AE",
-        "nooninstant": "W00813851AE",
+    "W00079241A": {
+        "warehouse_key": "W00079241A",
+        "nooninstant": "W00079241A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.3_Lng:55.4",
-        "lat": 25.3,
-        "lng": 55.4
+        "area": "Dubai, United Arab Emirates",
+        "lat": 25.1,
+        "lng": 55.41
+    },
+    "W00829386AE": {
+        "warehouse_key": "W00829386AE",
+        "nooninstant": "W00829386AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Qusais Ind. First",
+        "lat": 25.29,
+        "lng": 55.39
     },
     "W00046515A": {
         "warehouse_key": "W00046515A",
         "nooninstant": "W00046515A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.3_Lng:55.45",
-        "lat": 25.3,
+        "area": "Tugariet Muwaileh",
+        "lat": 25.29,
         "lng": 55.45
+    },
+    "W00813270AE": {
+        "warehouse_key": "W00813270AE",
+        "nooninstant": "W00813270AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Nahda Second",
+        "lat": 25.29,
+        "lng": 55.37
+    },
+    "W00813851AE": {
+        "warehouse_key": "W00813851AE",
+        "nooninstant": "W00813851AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Talaa",
+        "lat": 25.34,
+        "lng": 55.45
+    },
+    "W00823498AE": {
+        "warehouse_key": "W00823498AE",
+        "nooninstant": "W00823498AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Muhaisanah 4",
+        "lat": 25.28,
+        "lng": 55.41
+    },
+    "W00817831AE": {
+        "warehouse_key": "W00817831AE",
+        "nooninstant": "W00817831AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Alnahdha",
+        "lat": 25.32,
+        "lng": 55.4
+    },
+    "W00824376AE": {
+        "warehouse_key": "W00824376AE",
+        "nooninstant": "W00824376AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Emaar South",
+        "lat": 24.85,
+        "lng": 55.15
+    },
+    "W00089031A": {
+        "warehouse_key": "W00089031A",
+        "nooninstant": "W00089031A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Madinat Al Maktoum",
+        "lat": 24.95,
+        "lng": 55.2
+    },
+    "W00818343AE": {
+        "warehouse_key": "W00818343AE",
+        "nooninstant": "W00818343AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Dubai Investments Park 1",
+        "lat": 24.98,
+        "lng": 55.17
+    },
+    "W00048740A": {
+        "warehouse_key": "W00048740A",
+        "nooninstant": "W00048740A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Dubai Investments Park 1",
+        "lat": 24.98,
+        "lng": 55.16
+    },
+    "W00056049A": {
+        "warehouse_key": "W00056049A",
+        "nooninstant": "W00056049A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Community Jabal Ali 1",
+        "lat": 25.03,
+        "lng": 55.11
+    },
+    "W00840825AE": {
+        "warehouse_key": "W00840825AE",
+        "nooninstant": "W00840825AE",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Dubai, United Arab Emirates",
+        "lat": 25.28,
+        "lng": 55.36
+    },
+    "W00060249A": {
+        "warehouse_key": "W00060249A",
+        "nooninstant": "W00060249A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Sharjah, United Arab Emirates",
+        "lat": 25.33,
+        "lng": 55.41
     },
     "W00831898AE": {
         "warehouse_key": "W00831898AE",
         "nooninstant": "W00831898AE",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.3_Lng:55.5",
-        "lat": 25.3,
+        "area": "Sharjah, United Arab Emirates",
+        "lat": 25.29,
         "lng": 55.5
-    },
-    "W00842131AE": {
-        "warehouse_key": "W00842131AE",
-        "nooninstant": "W00842131AE",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.35_Lng:55.4",
-        "lat": 25.35,
-        "lng": 55.4
     },
     "W00046516A": {
         "warehouse_key": "W00046516A",
         "nooninstant": "W00046516A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.35_Lng:55.45",
-        "lat": 25.35,
-        "lng": 55.45
+        "area": "Al Ramla East",
+        "lat": 25.36,
+        "lng": 55.42
     },
-    "W00048741A": {
-        "warehouse_key": "W00048741A",
-        "nooninstant": "W00048741A",
+    "W00091093A": {
+        "warehouse_key": "W00091093A",
+        "nooninstant": "W00091093A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.4_Lng:55.45",
-        "lat": 25.4,
-        "lng": 55.45
-    },
-    "W00048742A": {
-        "warehouse_key": "W00048742A",
-        "nooninstant": "W00048742A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:25.4_Lng:55.5",
-        "lat": 25.4,
-        "lng": 55.5
+        "area": "Ajman Industrial 2",
+        "lat": 25.38,
+        "lng": 55.47
     },
     "W00818342AE": {
         "warehouse_key": "W00818342AE",
         "nooninstant": "W00818342AE",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.4_Lng:55.55",
-        "lat": 25.4,
-        "lng": 55.55
+        "area": "Al Humaideya 1",
+        "lat": 25.41,
+        "lng": 55.52
     },
-    "W00831897AE": {
-        "warehouse_key": "W00831897AE",
-        "nooninstant": "W00831897AE",
+    "W00808869AE": {
+        "warehouse_key": "W00808869AE",
+        "nooninstant": "W00808869AE",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.4_Lng:55.6",
-        "lat": 25.4,
-        "lng": 55.6
+        "area": "Al Mowaihat 1",
+        "lat": 25.38,
+        "lng": 55.52
     },
-    "W00058871A": {
-        "warehouse_key": "W00058871A",
-        "nooninstant": "W00058871A",
+    "W00813268AE": {
+        "warehouse_key": "W00813268AE",
+        "nooninstant": "W00813268AE",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.5_Lng:55.55",
-        "lat": 25.5,
-        "lng": 55.55
+        "area": "Tallah 2",
+        "lat": 25.43,
+        "lng": 55.52
     },
-    "W00106303A": {
-        "warehouse_key": "W00106303A",
-        "nooninstant": "W00106303A",
+    "W00099706A": {
+        "warehouse_key": "W00099706A",
+        "nooninstant": "W00099706A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:25.5_Lng:55.6",
-        "lat": 25.5,
-        "lng": 55.6
+        "area": "W62",
+        "lat": 24.42,
+        "lng": 54.42
     },
-    "W00838971AE": {
-        "warehouse_key": "W00838971AE",
-        "nooninstant": "W00838971AE",
+    "W00824883AE": {
+        "warehouse_key": "W00824883AE",
+        "nooninstant": "W00824883AE",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:24.3_Lng:54.6",
-        "lat": 24.3,
-        "lng": 54.6
-    },
-    "W00085834A": {
-        "warehouse_key": "W00085834A",
-        "nooninstant": "W00085834A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:24.3_Lng:54.55",
-        "lat": 24.3,
-        "lng": 54.55
-    },
-    "W00109196A": {
-        "warehouse_key": "W00109196A",
-        "nooninstant": "W00109196A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:24.3_Lng:54.65",
-        "lat": 24.3,
-        "lng": 54.65
+        "area": "Abu Dhabi, United Arab Emirates",
+        "lat": 24.47,
+        "lng": 54.37
     },
     "W00056604A": {
         "warehouse_key": "W00056604A",
         "nooninstant": "W00056604A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:24.35_Lng:54.55",
-        "lat": 24.35,
-        "lng": 54.55
+        "area": "MZ40",
+        "lat": 24.37,
+        "lng": 54.57
     },
     "W00093526A": {
         "warehouse_key": "W00093526A",
         "nooninstant": "W00093526A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:24.4_Lng:54.65",
-        "lat": 24.4,
-        "lng": 54.65
-    },
-    "W00821731AE": {
-        "warehouse_key": "W00821731AE",
-        "nooninstant": "W00821731AE",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:24.35_Lng:54.65",
-        "lat": 24.35,
-        "lng": 54.65
-    },
-    "W00057194A": {
-        "warehouse_key": "W00057194A",
-        "nooninstant": "W00057194A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:24.35_Lng:54.7",
-        "lat": 24.35,
-        "lng": 54.7
-    },
-    "W00048743A": {
-        "warehouse_key": "W00048743A",
-        "nooninstant": "W00048743A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:24.4_Lng:54.5",
-        "lat": 24.4,
-        "lng": 54.5
-    },
-    "W00821730AE": {
-        "warehouse_key": "W00821730AE",
-        "nooninstant": "W00821730AE",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:24.4_Lng:54.55",
-        "lat": 24.4,
-        "lng": 54.55
-    },
-    "W00830324AE": {
-        "warehouse_key": "W00830324AE",
-        "nooninstant": "W00830324AE",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:24.4_Lng:54.75",
-        "lat": 24.4,
-        "lng": 54.75
-    },
-    "W00809697AE": {
-        "warehouse_key": "W00809697AE",
-        "nooninstant": "W00809697AE",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:24.45_Lng:54.35",
-        "lat": 24.45,
-        "lng": 54.35
-    },
-    "W00109200A": {
-        "warehouse_key": "W00109200A",
-        "nooninstant": "W00109200A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:24.45_Lng:54.4",
-        "lat": 24.45,
-        "lng": 54.4
+        "area": "MZ4",
+        "lat": 24.37,
+        "lng": 54.62
     },
     "W00057195A": {
         "warehouse_key": "W00057195A",
         "nooninstant": "W00057195A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:24.45_Lng:54.6",
-        "lat": 24.45,
-        "lng": 54.6
+        "area": "SE45-05",
+        "lat": 24.44,
+        "lng": 54.62
     },
-    "W00119042A": {
-        "warehouse_key": "W00119042A",
-        "nooninstant": "W00119042A",
+    "W00085834A": {
+        "warehouse_key": "W00085834A",
+        "nooninstant": "W00085834A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:24.45_Lng:54.75",
-        "lat": 24.45,
-        "lng": 54.75
+        "area": "Zone 22",
+        "lat": 24.32,
+        "lng": 54.57
     },
-    "W00818339AE": {
-        "warehouse_key": "W00818339AE",
-        "nooninstant": "W00818339AE",
+    "W00056050A": {
+        "warehouse_key": "W00056050A",
+        "nooninstant": "W00056050A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:24.5_Lng:54.4",
-        "lat": 24.5,
-        "lng": 54.4
+        "area": "Baniyas East",
+        "lat": 24.32,
+        "lng": 54.62
     },
     "W00056603A": {
         "warehouse_key": "W00056603A",
         "nooninstant": "W00056603A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:24.55_Lng:54.7",
-        "lat": 24.55,
-        "lng": 54.7
-    },
-    "W00099707A": {
-        "warehouse_key": "W00099707A",
-        "nooninstant": "W00099707A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:24.2_Lng:55.65",
-        "lat": 24.2,
-        "lng": 55.65
-    },
-    "W00099703A": {
-        "warehouse_key": "W00099703A",
-        "nooninstant": "W00099703A",
-        "ecom": "AE_DXB-S14",
-        "rocket": "W00068765A",
-        "area": "Lat:24.2_Lng:55.8",
-        "lat": 24.2,
-        "lng": 55.8
+        "area": "Al Bahyah Farms 2",
+        "lat": 24.53,
+        "lng": 54.65
     },
     "W00060243A": {
         "warehouse_key": "W00060243A",
         "nooninstant": "W00060243A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:24.25_Lng:55.7",
+        "area": "Eidan Al Jareh",
         "lat": 24.25,
-        "lng": 55.7
+        "lng": 55.68
+    },
+    "W00099703A": {
+        "warehouse_key": "W00099703A",
+        "nooninstant": "W00099703A",
+        "ecom": "AE_DXB-S14",
+        "rocket": "W00068765A",
+        "area": "Al Harmoozi",
+        "lat": 24.2,
+        "lng": 55.78
     },
     "W00065903A": {
         "warehouse_key": "W00065903A",
         "nooninstant": "W00065903A",
         "ecom": "AE_DXB-S14",
         "rocket": "W00068765A",
-        "area": "Lat:24.25_Lng:55.75",
+        "area": "Al Jimi",
         "lat": 24.25,
-        "lng": 55.75
+        "lng": 55.73
     }
 }

@@ -11,7 +11,8 @@ async def main():
 
         print(results)
 
-       
+        # with open("output/results.json", "w") as f:
+        #     json.dump(results, f, indent=4)
 
 
 if __name__ == "__main__":
