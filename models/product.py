@@ -21,8 +21,8 @@ class NoonProduct(Base):
 
     price = Column(Integer, nullable=False)
     inventory = Column(Integer, nullable=False)
-    categoryId = Column(Integer, nullable=False)
-    subCategoryId = Column(Integer, nullable=False)
+    categoryId = Column(Text, nullable=False)
+    subCategoryId = Column(Text, nullable=False)
     merchant_name = Column(Text, nullable=False)
     
     createdAt = Column(DateTime,nullable=False,server_default=func.now())

@@ -8,4 +8,4 @@ NOON_REDIS_PORT = int(os.getenv("NOON_REDIS_PORT", 6679))
 NOON_REDIS_PASSWORD = os.getenv("NOON_REDIS_PASSWORD", "")
 
 
-NOON_BASE_URL = 'https://www.noon.com/_vs/nc/mp-customer-catalog-api/api/v3/u'
+NOON_BASE_URL = 'https://minutes.noon.com'
